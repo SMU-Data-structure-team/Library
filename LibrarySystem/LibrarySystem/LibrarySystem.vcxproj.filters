@@ -20,10 +20,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BookManager.cpp">
+    <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="BookManager.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="db_connection.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorCheck.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

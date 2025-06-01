@@ -102,12 +102,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions) _CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);odbc32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,8 +131,10 @@
     <ClInclude Include="BookManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BookManager.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="BookManager.c" />
+    <ClCompile Include="db_connection.c" />
+    <ClCompile Include="ErrorCheck.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\..\Downloads\books.csv" />
